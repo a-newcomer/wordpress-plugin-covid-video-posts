@@ -1,0 +1,89 @@
+/* 
+This page styles  the archive-virtual, single-virtual, content and content-video pages for the VX custom posts plugin.
+
+theme dk blue #143380
+theme bright blue #2b58db */
+
+/* * * * * * * * ARCHIVE PAGE, OR LIST PAGE STYLING * * * * * * * * * * */
+
+.post-type-archive-virtual .container {
+    width: 85%;
+    /* padding-left: 4vw;
+    padding-right: 4vw; */
+    /* remove the below bg-color to return to orginal formatting, and see below */
+    background-color: transparent;
+}
+.post-type-archive-virtual .entry-header {
+    padding-bottom: 2rem;
+}
+.post-type-archive-virtual a,
+ .post-type-archive-virtual h1,
+ .post-type-archive-virtual h2,
+ .post-type-archive-virtual h3 ,
+ .post-type-archive-virtual h4 {
+    color: white;
+}
+.post-type-archive-virtual .blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap:4vw;
+}
+
+.post-type-archive-virtual .blog-in-list {
+    padding: 1rem;
+    /* height: fit-content; */
+    box-shadow: 2px 2px 20px rgba(50, 0, 150, .4);
+    color: white;
+    background-color: #2b58db;
+    border: 1px solid #143380;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.post-type-archive-virtual .blog-in-list iframe {
+    width: 100%;
+}
+.post-type-archive-virtual .blog-in-list .post-thumbnail {
+    width: 100%;
+}
+.post-type-archive-virtual .blog-in-list .speaker-cta-wrapper {
+}
+/* make background white, to show of videos more cleanly */
+.post-type-archive-virtual .sub-page-wrapper {
+    background-color: white;
+}
+.post-type-archive-virtual #subPageHead:after {
+    height: 68%;
+    background-color: rgba(0,0,0,0);
+}
+/* * * * * * * * SINGLE POST STYLING * * * * * * * * * * */
+
+.virtual-template-default #singlePost #blogImg {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: cover;
+}
+.virtual-template-default #singlePost #blogImg img{
+   
+}
+.virtual-template-default iframe {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3rem;1b3380
+@media (max-width: 500px) {
+    .post-type-archive-virtual .container {
+        width: 99%;
+    }
+    .post-type-archive-virtual .blog-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .virtual-template-default iframe {
+        height: 200px;
+    }
+    .post-type-archive-virtual #subPageHead:after {
+        height: 87%;
+    }
+
+}
