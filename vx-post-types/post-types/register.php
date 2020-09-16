@@ -25,3 +25,23 @@ function vx_register_virtual_type() {
 
     register_post_type( 'virtual', $args );
 }
+
+add_action( 'pre_get_posts', 'vx_archive_random' );
+/**
+ * Set Random order for entries on Virtual archive page
+ *
+ * @author Bill Erickson
+ * @author Ann Newcomer
+ * @param object $query data
+ *
+ */
+
+// ordering the virtual posts randomly and setting 18 per page
+function vx_archive_random( $query ) {
+
+	if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'virtual' ) ) {
+		$query->set( 'orderby', 'rand' );
+		$query->set( 'posts_per_page', 18);
+	}
+
+}
